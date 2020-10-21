@@ -109,6 +109,9 @@ public class ProductController {
         return productDao.orderAscend();
     }
 
-    //public
+    @GetMapping (value = "/AdminProduits")
+    public List<Product> calculerMargeProduit(){
+        return productDao.calcMarge();
+    }
 
 }
