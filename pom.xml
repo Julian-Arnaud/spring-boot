@@ -6,7 +6,10 @@
 	<groupId>com.ecommerce</groupId>
 	<artifactId>microcommerce</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modules>
+        <module>circuit-breaker</module>
+    </modules>
+    <packaging>pom</packaging>
 
 	<name>microcommerce</name>
 	<description>Un ecommerce basé sur la MSA</description>

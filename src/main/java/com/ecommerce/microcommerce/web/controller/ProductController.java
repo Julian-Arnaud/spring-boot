@@ -72,7 +72,7 @@ public class ProductController {
 
         Product productAdded =  productDao.save(product);
         if (product.getPrix() == 0)
-            throw new ProduitGratuitException();
+            throw new ProduitGratuitException("xx");
         if (productAdded == null)
             return ResponseEntity.noContent().build();
 

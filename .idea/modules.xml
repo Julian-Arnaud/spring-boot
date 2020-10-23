@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/circuit-breaker/circuitbreaker.iml" filepath="$PROJECT_DIR$/circuit-breaker/circuitbreaker.iml" />
       <module fileurl="file://$PROJECT_DIR$/microcommerce.iml" filepath="$PROJECT_DIR$/microcommerce.iml" />
     </modules>
   </component>
