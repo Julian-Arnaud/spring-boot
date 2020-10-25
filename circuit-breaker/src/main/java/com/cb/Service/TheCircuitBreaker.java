@@ -9,6 +9,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 @Service
 public class TheCircuitBreaker {
     @Autowired
@@ -19,7 +21,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public Product cbAfficherUnProduit(int id){
-        return restTemplate.exchange("http://localhost:9090/Produits/{id}",
+        return restTemplate.exchange("http://localhost:8080/Produits/{id}",
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<Product>() {
@@ -30,7 +32,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public String cbAjouterProduit(){
-        return restTemplate.exchange("http://localhost:9090/Produits"
+        return restTemplate.exchange("http://localhost:8080/Produits"
                 , HttpMethod.POST
                 , null
                 , new ParameterizedTypeReference<String>() {
@@ -39,18 +41,18 @@ public class TheCircuitBreaker {
     }
 
     @HystrixCommand(fallbackMethod = "generalFallback")
-    public String cbOrderProducts(){
-        return restTemplate.exchange("http://localhost:9090/OrderProducts"
+    public List<Product> cbOrderProducts(){
+        return restTemplate.exchange("http://localhost:8080/OrderProducts"
                 , HttpMethod.GET
                 , null
-                , new ParameterizedTypeReference<String>() {
+                , new ParameterizedTypeReference<List<Product>>() {
                 }
                 , "Erreur sur recuperation de liste ordonnee").getBody();
     }
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public String cbMargeProduit(){
-        return restTemplate.exchange("http://localhost:9090/Produits"
+        return restTemplate.exchange("http://localhost:8080/Produits"
                 , HttpMethod.GET
                 , null
                 , new ParameterizedTypeReference<String>() {
