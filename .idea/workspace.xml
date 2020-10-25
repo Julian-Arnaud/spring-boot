@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0e404847-f054-4d6d-9c5c-9be8e1050a7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/dao/ProductDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/web/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/web/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ecommerce/microcommerce/web/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ecommerce/microcommerce/web/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/circuitbreaker/target/" />
@@ -19,33 +15,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/model/Product.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/configuration/SwaggerConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/ecommerce/microcommerce/web/controller/ProductControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/web/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-825">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="409">
+              <caret line="167" column="66" selection-start-line="167" selection-start-column="66" selection-end-line="167" selection-end-column="66" />
               <folding>
                 <element signature="method#listeProduits#0;class#ProductController#0" />
               </folding>
@@ -77,8 +61,8 @@
         <option value="$PROJECT_DIR$/circuit-breaker/src/main/java/com/cb/Service/TheCircuitBreaker.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ecommerce/microcommerce/model/ProductTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/dao/ProductDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/web/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ecommerce/microcommerce/web/controller/ProductControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/web/controller/ProductController.java" />
       </list>
     </option>
   </component>
@@ -104,7 +88,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,10 +178,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1603554024255" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1603564794531" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -288,9 +272,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProductControllerTest - 2020.10.24 at 16h 28m 24s.xml">
-      <configuration name="ProductControllerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ProductControllerTest - 2020.10.24 at 16h 28m 46s.xml">
       <configuration name="ProductControllerTest" configurationId="JUnit" />
     </history-entry>
@@ -318,12 +299,15 @@
     <history-entry file="ProductControllerTest - 2020.10.24 at 17h 25m 35s.xml">
       <configuration name="ProductControllerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProductControllerTest - 2020.10.24 at 17h 40m 29s.xml">
+      <configuration name="ProductControllerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2669805" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27101547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -332,7 +316,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297587" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3297587" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -418,24 +402,10 @@
         <state relative-caret-position="-1665" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/configuration/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/ecommerce/microcommerce/model/ProductTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -449,22 +419,36 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/web/controller/ProductController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ecommerce/microcommerce/web/controller/ProductControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-825">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="559">
+          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
           <folding>
-            <element signature="method#listeProduits#0;class#ProductController#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ecommerce/microcommerce/web/controller/ProductControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/model/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        <state relative-caret-position="90">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/configuration/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecommerce/microcommerce/web/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="167" column="66" selection-start-line="167" selection-start-column="66" selection-end-line="167" selection-end-column="66" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#listeProduits#0;class#ProductController#0" />
           </folding>
         </state>
       </provider>

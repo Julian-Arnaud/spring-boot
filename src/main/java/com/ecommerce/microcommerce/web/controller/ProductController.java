@@ -9,6 +9,8 @@ import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJacksonValue;
@@ -31,8 +33,16 @@ public class ProductController {
 
     //Récupérer la liste des produits
 
+    @ApiOperation(value = "Affiche les produits")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(code = 200, message = "ok"),
+                    @ApiResponse(code = 401, message = "non autorisé"),
+                    @ApiResponse(code = 403, message = "forbidden"),
+                    @ApiResponse(code = 404, message = "not found")
+            }
+    )
     @RequestMapping(value = "/Produits", method = RequestMethod.GET)
-
     public MappingJacksonValue listeProduits() {
 
         Iterable<Product> produits = productDao.findAll();
@@ -51,6 +61,14 @@ public class ProductController {
 
     //Récupérer un produit par son Id
     @ApiOperation(value = "Récupère un produit grâce à son ID à condition que celui-ci soit en stock!")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(code = 200, message = "ok"),
+                    @ApiResponse(code = 401, message = "non autorisé"),
+                    @ApiResponse(code = 403, message = "forbidden"),
+                    @ApiResponse(code = 404, message = "not found")
+            }
+    )
     @GetMapping(value = "/Produits/{id}")
 
     public Product afficherUnProduit(@PathVariable int id) {
@@ -66,6 +84,15 @@ public class ProductController {
 
 
     //ajouter un produit
+    @ApiOperation(value = "Permet d'ajouter un produit à la collection à condition que son prix soit non nul")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(code = 200, message = "ok"),
+                    @ApiResponse(code = 401, message = "non autorisé"),
+                    @ApiResponse(code = 403, message = "forbidden"),
+                    @ApiResponse(code = 404, message = "not found")
+            }
+    )
     @PostMapping(value = "/Produits")
 
     public ResponseEntity<Void> ajouterProduit(@Valid @RequestBody Product product) {
@@ -85,12 +112,30 @@ public class ProductController {
         return ResponseEntity.created(location).build();
     }
 
+    @ApiOperation(value = "Permet de supprimer un produit de la collection via son ID")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(code = 200, message = "ok"),
+                    @ApiResponse(code = 401, message = "non autorisé"),
+                    @ApiResponse(code = 403, message = "forbidden"),
+                    @ApiResponse(code = 404, message = "not found")
+            }
+    )
     @DeleteMapping (value = "/Produits/{id}")
     public void supprimerProduit(@PathVariable int id) {
 
         productDao.delete(id);
     }
 
+    @ApiOperation(value = "Permet de mettre à jour un produit")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(code = 200, message = "ok"),
+                    @ApiResponse(code = 401, message = "non autorisé"),
+                    @ApiResponse(code = 403, message = "forbidden"),
+                    @ApiResponse(code = 404, message = "not found")
+            }
+    )
     @PutMapping (value = "/Produits")
     public void updateProduit(@RequestBody Product product) {
 
@@ -106,11 +151,29 @@ public class ProductController {
     }
 
     //Renvoie les produits tries par ordre alphabetique
+    @ApiOperation(value = "Affiche les produits classés par odre alphabétique")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(code = 200, message = "ok"),
+                    @ApiResponse(code = 401, message = "non autorisé"),
+                    @ApiResponse(code = 403, message = "forbidden"),
+                    @ApiResponse(code = 404, message = "not found")
+            }
+    )
     @GetMapping (value = "/OrderProducts")
     public List<Product> trierProduitsParOrdreAlphabetique(){
         return productDao.orderAscend();
     }
 
+    @ApiOperation(value = "Renvoie la marge de chacun des produits")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(code = 200, message = "ok"),
+                    @ApiResponse(code = 401, message = "non autorisé"),
+                    @ApiResponse(code = 403, message = "forbidden"),
+                    @ApiResponse(code = 404, message = "not found")
+            }
+    )
     @GetMapping (value = "/AdminProduits")
     public List<Product> calculerMargeProduit(){
         return productDao.calcMarge();
