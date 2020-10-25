@@ -12,6 +12,7 @@
     <bytecodeTargetLevel>
       <module name="circuitbreaker" target="1.8" />
       <module name="microcommerce" target="1.8" />
+      <module name="productapplication" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

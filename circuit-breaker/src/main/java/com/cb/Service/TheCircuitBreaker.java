@@ -52,7 +52,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public String cbMargeProduit(){
-        return restTemplate.exchange("http://localhost:8080/Produits"
+        return restTemplate.exchange("http://localhost:8080/AdminProduits"
                 , HttpMethod.GET
                 , null
                 , new ParameterizedTypeReference<String>() {

@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 public class CircuitBreakerController {
     @Autowired
-    TheCircuitBreaker circuitBreaker;
+    private TheCircuitBreaker circuitBreaker;
 
     @RequestMapping(value = "/Produits/{id}", method = RequestMethod.GET)
     public Product cGetProduit(@PathVariable int id){
