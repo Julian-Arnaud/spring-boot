@@ -21,7 +21,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public Product cbAfficherUnProduit(int id){
-        return restTemplate.exchange("http://localhost:8080/Produits/{id}",
+        return restTemplate.exchange("http://localhost:9090/Produits/{id}",
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<Product>() {
@@ -32,7 +32,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public String cbAjouterProduit(){
-        return restTemplate.exchange("http://localhost:8080/Produits"
+        return restTemplate.exchange("http://localhost:9090/Produits"
                 , HttpMethod.POST
                 , null
                 , new ParameterizedTypeReference<String>() {
@@ -42,7 +42,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public List<Product> cbOrderProducts(){
-        return restTemplate.exchange("http://localhost:8080/OrderProducts"
+        return restTemplate.exchange("http://localhost:9090/OrderProducts"
                 , HttpMethod.GET
                 , null
                 , new ParameterizedTypeReference<List<Product>>() {
@@ -52,7 +52,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public String cbMargeProduit(){
-        return restTemplate.exchange("http://localhost:8080/AdminProduits"
+        return restTemplate.exchange("http://localhost:9090/AdminProduits"
                 , HttpMethod.GET
                 , null
                 , new ParameterizedTypeReference<String>() {
