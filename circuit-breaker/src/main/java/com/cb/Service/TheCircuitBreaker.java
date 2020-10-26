@@ -19,9 +19,9 @@ public class TheCircuitBreaker {
     @Bean
     public RestTemplate restTemplate(){return new RestTemplate();}
 
-    @HystrixCommand(fallbackMethod = "generalFallback")
+    @HystrixCommand(fallbackMethod = "generalFallback2")
     public Product cbAfficherUnProduit(int id){
-        return restTemplate.exchange("http://localhost:9090/Produits/{id}",
+        return restTemplate.exchange("http://localhost:8080/Produits/{id}",
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<Product>() {
@@ -32,7 +32,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public String cbAjouterProduit(){
-        return restTemplate.exchange("http://localhost:9090/Produits"
+        return restTemplate.exchange("http://localhost:8080/Produits"
                 , HttpMethod.POST
                 , null
                 , new ParameterizedTypeReference<String>() {
@@ -42,7 +42,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public List<Product> cbOrderProducts(){
-        return restTemplate.exchange("http://localhost:9090/OrderProducts"
+        return restTemplate.exchange("http://localhost:8080/OrderProducts"
                 , HttpMethod.GET
                 , null
                 , new ParameterizedTypeReference<List<Product>>() {
@@ -52,7 +52,7 @@ public class TheCircuitBreaker {
 
     @HystrixCommand(fallbackMethod = "generalFallback")
     public String cbMargeProduit(){
-        return restTemplate.exchange("http://localhost:9090/AdminProduits"
+        return restTemplate.exchange("http://localhost:8080/AdminProduits"
                 , HttpMethod.GET
                 , null
                 , new ParameterizedTypeReference<String>() {
@@ -61,4 +61,6 @@ public class TheCircuitBreaker {
     }
 
     public String generalFallback(){return "Failure but no worry, uncle Tim is working on it.";}
+
+    public String generalFallback2(int id){return "Failure but no worry, uncle Tim is working on it.";}
 }
